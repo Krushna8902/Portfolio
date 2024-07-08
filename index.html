@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Krushna's Portfolio</title>
+
+    <!-- Preload the background image -->
+    <link rel="preload" href="background.jpg" as="image">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        color: white;
+      }
+      body {
+        background: url('background.jpg') no-repeat center center fixed;
+        background-size: cover;
+      }
+      .container {
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+      }
+	  .container1 {
+        background: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+      }
+      .hero, .education {
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+      .collapsible-content1, .collapsible-content2, .collapsible-content3 {
+        display: none;
+        margin-left: 20px;
+      }
+	  .hero {
+		padding-top: 100px;
+	  }
+      .hero h1, .hero h3, .hero p {
+        animation: fadeInUp 2s ease-out;
+      }
+      .hero h1 {
+        animation-delay: 0.5s;
+      }
+      .hero h3 {
+        animation-delay: 1s;
+      }
+      .hero p {
+        animation-delay: 1.5s;
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Projects</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="hero container">
+        <h3 class="display-5 fw-bold">Hello It's Me</h3>
+        <h1 class="display-3 fw-bold">Krushna Siraskar</h1>
+        <h3 class="display-5 fw-bold">And I'm a Software Developer</h3>
+        <p class="lead">I am passionate and dedicated to my work as a software developer.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <a href="resume.pdf" class="btn btn-primary btn-lg px-4 me-md-2 text-decoration-none" role="button">Resume</a>
+        </div>
+    </div>
+    
+	<div class="px-5 row">
+	<div class="col-7">
+    <div class="education container container1">
+        <h1 class="display-3 fw-bold">Education</h1>
+        <h3 class="display-5 fw-bold" onclick="toggleCollapsible1()">Under Graduate Degree</h3>
+        <div id="collapsible-content1" class="collapsible-content1">
+            <p>B.E in Computer Engineering</p>
+            <p>K. K. Wagh Institute of Engineering Education and Research, Nashik</p>
+            <p>SGPA: 8.03</p>
+            <p>2021-2025</p>
+        </div>
+        <h3 class="display-5 fw-bold" onclick="toggleCollapsible2()">Higher Secondary Education</h3>
+        <div id="collapsible-content2" class="collapsible-content2">
+            <p>HSC</p>
+            <p>Urbane Junior College Madhapur, Hyderabad</p>
+            <p>Marks: 96%</p>
+            <p>2021</p>
+        </div>
+        <h3 class="display-5 fw-bold" onclick="toggleCollapsible3()">Secondary School Education</h3>
+        <div id="collapsible-content3" class="collapsible-content3">
+            <p>SSC</p>
+            <p>Bahirji Smarak Vidhyalaya, Basmath</p>
+            <p>Marks: 88.60%</p>
+            <p>2019</p>
+        </div>
+    </div>
+	</div>
+	
+	
+
+    <script>
+        function toggleCollapsible1() {
+            var content = document.getElementById("collapsible-content1");
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+        
+        function toggleCollapsible2() {
+            var content = document.getElementById("collapsible-content2");
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+        
+        function toggleCollapsible3() {
+            var content = document.getElementById("collapsible-content3");
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
