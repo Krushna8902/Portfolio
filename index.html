@@ -72,6 +72,63 @@
           transform: translateY(0);
         }
       }
+	  .experience-card {
+            background: rgba(0, 0, 0, 0.8); 
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+        .experience-card h5 {
+            font-weight: bold;
+        }
+        .experience-card p {
+            margin-bottom: 5px;
+        }
+		body {
+            background-color: #121212; /* Dark background */
+            color: white;
+        }
+
+        .container1, .experience-container {
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .container1 {
+            background: rgba(30, 30, 30, 0.9); 
+            color: #00adb5; 
+        }
+
+        .experience-container {
+            background: rgba(50, 50, 50, 0.9); 
+            color: #ff5722; 
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        h3, .company-name {
+            cursor: pointer;
+        }
+
+        .modal-content {
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            border-radius: 10px;
+        }
+
+        .btn-close {
+            filter: invert(1); 
+        }
+		.education,.experience {
+			padding: 20px;
+			border-radius: 10px;
+			margin-bottom: 20px;
+			color: white; 
+			}
     </style>
 </head>
 <body>
@@ -85,10 +142,10 @@
             <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Education</a>
+            <a class="nav-link" href="#education">Education</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Experience</a>
+            <a class="nav-link" href="#experience">Experience</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Projects</a>
@@ -106,39 +163,89 @@
           <a href="resume.pdf" class="btn btn-primary btn-lg px-4 me-md-2 text-decoration-none" role="button">Resume</a>
         </div>
     </div>
-    
-	<div class="px-5 row">
-	<div class="col-7">
-    <div class="education container container1">
-        <h1 class="display-3 fw-bold">Education</h1>
-        <h3 class="display-5 fw-bold" onclick="toggleCollapsible1()">Under Graduate Degree</h3>
-        <div id="collapsible-content1" class="collapsible-content1">
-            <p>B.E in Computer Engineering</p>
-            <p>K. K. Wagh Institute of Engineering Education and Research, Nashik</p>
-            <p>SGPA: 8.03</p>
-            <p>2021-2025</p>
-        </div>
-        <h3 class="display-5 fw-bold" onclick="toggleCollapsible2()">Higher Secondary Education</h3>
-        <div id="collapsible-content2" class="collapsible-content2">
-            <p>HSC</p>
-            <p>Urbane Junior College Madhapur, Hyderabad</p>
-            <p>Marks: 96%</p>
-            <p>2021</p>
-        </div>
-        <h3 class="display-5 fw-bold" onclick="toggleCollapsible3()">Secondary School Education</h3>
-        <div id="collapsible-content3" class="collapsible-content3">
-            <p>SSC</p>
-            <p>Bahirji Smarak Vidhyalaya, Basmath</p>
-            <p>Marks: 88.60%</p>
-            <p>2019</p>
+
+    <div class="px-5 row">
+        <div class="col-7">
+            <div class="education container container1" id="education">
+                <h1 class="display-3 fw-bold">Education</h1>
+                <h3 class="display-5 fw-bold" onclick="tg1()">Under Graduate Degree</h3>
+                <div id="collapsible-content1" class="collapsible-content1">
+                    <p>B.E in Computer Engineering</p>
+                    <p>K. K. Wagh Institute of Engineering Education and Research, Nashik</p>
+                    <p>SGPA: 8.03</p>
+                    <p>2021-2025</p>
+                </div>
+                <h3 class="display-5 fw-bold" onclick="tg2()">Higher Secondary Education</h3>
+                <div id="collapsible-content2" class="collapsible-content2">
+                    <p>HSC</p>
+                    <p>Urbane Junior College Madhapur, Hyderabad</p>
+                    <p>Marks: 96%</p>
+                    <p>2021</p>
+                </div>
+                <h3 class="display-5 fw-bold" onclick="tg3()">Secondary School Education</h3>
+                <div id="collapsible-content3" class="collapsible-content3">
+                    <p>SSC</p>
+                    <p>Bahirji Smarak Vidhyalaya, Basmath</p>
+                    <p>Marks: 88.60%</p>
+                    <p>2019</p>
+                </div>
+            </div>
         </div>
     </div>
-	</div>
-	
-	
 
+    <div class="px-5 row">
+        <div class="col-7">
+            <div class="experience container container1" id="experience">
+                <h1 class="display-3 fw-bold">Experience</h1>
+                <h3 class="display-5 fw-bold" onclick="tg4()">PHYSICIANXPRESS</h3>
+                <div id="collapsible-content4" class="collapsible-content1">
+                    <p><strong>Position:</strong> Java Intern (Remote)</p>
+                    <p><strong>Location:</strong> Collegeville, PA 19426, USA</p>
+                    <p><strong>Duration:</strong> July 2024 – Aug 2024</p>
+                    <p><strong>Responsibilities:</strong></p>
+                    <ul>
+                        <li>Assisted in migrating a Java-based interface from Java 1.7 to Java 17.</li>
+                        <li>Updated dependencies, resolved deprecated features, and conducted testing to ensure enhanced performance, security, and compatibility.</li>
+                    </ul>
+                    <p><strong>Technologies:</strong> Java, Spring, Java Dependencies, JDBC, MySQL</p>
+                </div>
+                <h3 class="display-5 fw-bold" onclick="tg5()">TRUEMIRROR TECHNOLOGIES</h3>
+                <div id="collapsible-content5" class="collapsible-content1">
+                    <p><strong>Position:</strong> Development Intern (On-site)</p>
+                    <p><strong>Location:</strong> Nashik, Maharashtra</p>
+                    <p><strong>Duration:</strong> Jan 2024 – Jun 2024</p>
+                    <p><strong>Responsibilities:</strong></p>
+                    <ul>
+                        <li>Developed an advanced online billing system to enhance user efficiency.</li>
+                        <li>Designed a data crawling solution for effortless data retrieval from specified URLs.</li>
+                    </ul>
+                    <p><strong>Technologies:</strong> Bootstrap, Node.Js, Express.Js, Python, MySQL</p>
+                </div>
+                <h3 class="display-5 fw-bold" onclick="tg6()">BRINITO SERVICES</h3>
+                <div id="collapsible-content6" class="collapsible-content1">
+                    <p><strong>Position:</strong> Development Intern (On-site)</p>
+                    <p><strong>Location:</strong> Nashik, Maharashtra</p>
+                    <p><strong>Duration:</strong> Oct 2023 – Dec 2023</p>
+                    <p><strong>Responsibilities:</strong></p>
+                    <ul>
+                        <li>Developed a desktop application with diverse typing modules (sentences, emails, words, passages) to enhance speed and accuracy.</li>
+                        <li>Improved the UI for better engagement, significantly boosting typing efficiency.</li>
+                    </ul>
+                    <p><strong>Technologies:</strong> C#, .Net Desktop Application, Access DB</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        function toggleCollapsible1() {
+        function toggleCollapsible(id) {
+            const element = document.getElementById(id);
+            element.classList.toggle('show');
+        }
+    </script>
+    <script>
+        function tg1() {
             var content = document.getElementById("collapsible-content1");
             if (content.style.display === "none" || content.style.display === "") {
                 content.style.display = "block";
@@ -147,7 +254,7 @@
             }
         }
         
-        function toggleCollapsible2() {
+        function tg2() {
             var content = document.getElementById("collapsible-content2");
             if (content.style.display === "none" || content.style.display === "") {
                 content.style.display = "block";
@@ -156,8 +263,35 @@
             }
         }
         
-        function toggleCollapsible3() {
+        function tg3() {
             var content = document.getElementById("collapsible-content3");
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+        
+        function tg4() {
+            var content = document.getElementById("collapsible-content4");
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+
+        function tg5() {
+            var content = document.getElementById("collapsible-content5");
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+
+        function tg6() {
+            var content = document.getElementById("collapsible-content6");
             if (content.style.display === "none" || content.style.display === "") {
                 content.style.display = "block";
             } else {
